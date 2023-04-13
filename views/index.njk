@@ -1,0 +1,16 @@
+{% extends "layout.njk" %}
+
+{%block head%}
+    <title>Home de verdade, achei algo</title>
+{% endblock %}
+
+{% block content %}
+  <h1>Home</h1>
+  <p>Welcome to the home page</p>
+    <p>Here's a list of all the posts:</p>
+    <ul>
+      {% for item in items %}
+        <li><a href="/posts/{{ item.name }}">{{ item.age }}</a></li>
+      {% endfor %}
+    </ul>
+{% endblock %}
