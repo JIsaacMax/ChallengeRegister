@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --fontMain: 'Poppins', sans-serif;
+    --bg-color: #FDE2F3;
+    --text-color: #000;
+    --bg-nav-color: #2A2F4F;
+    --color-accent: #917FB3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontMain)
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+.E-CONTENT{
+    width: 100%;
+    height: calc(100vh - 80px);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.E-Navegation{
+    width: 100vw;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 8px 24px;
+    row-gap: 16px;
+    background-color: var(--bg-nav-color);
+}
+
+.E-Links{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.E-Links li + li{
+    padding-left: 16px;
+}
+
+.L-Single a, li{
+    color: white;
+    position: relative;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.L-Single a:active{
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.L-Single a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-accent);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+.L-Single a:hover::after{
+    width: 100%;
+    transition: width 200ms ease-in .5s;
+}
+
+#logo-ajust{
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    object-position: center;
+}

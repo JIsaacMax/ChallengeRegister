@@ -1,16 +1,24 @@
 {% extends "layout.njk" %}
-
 {%block head%}
-    <title>Home de verdade, achei algo</title>
-{% endblock %}
-
-{% block content %}
-  <h1>Home</h1>
-  <p>Welcome to the home page</p>
-    <p>Here's a list of all the posts:</p>
-    <ul>
-      {% for item in items %}
-        <li><a href="/posts/{{ item.name }}">{{ item.age }}</a></li>
-      {% endfor %}
-    </ul>
-{% endblock %}
+  <title>Home de verdade, achei algo</title>
+  <link rel="stylesheet" href="/styles/index.css">
+  {% endblock %}
+  {% block content %}
+    <div class="container">
+      <div class="focus"></div>
+      <div class="focus">
+        <h1>Details</h1>
+        <h2>Titulo</h2>
+        <p>A Arte da Sabedoria</p>
+        <h2>Autor</h2>
+        <p>Baltazar Gracian</p>
+        <h2>Sinopse</h2>
+        <p>Edição completa com os Oráculos inspiradores escritos há mais de 300 anos Grandes sábios e ilustres líderes buscaram
+          conhecimento na obra mais clássica de Baltasar Gracián. Escritos há mais de 300 anos, os aforismas criados pelo autor
+          permanecem atuais e são imprescindíveis para alcançar, em qualquer aspecto da vida, o sucesso.
+        </p>
+        <h2>Lançamento</h2>
+        <p>01/04/1998</p>
+        <h2>Avaliação</h2>
+        <p>&#11088;&#11088;&#11088;&#11088;&#11088;</p>
+      {% endblock %}

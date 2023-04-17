@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/general.css">
     {% block head %}
 
-    <title>Bloco de notas kakakaka</title>
+    <title>Error ao carregar o header com sucesso</title>
 
     {%endblock%}
 </head>
 <body>
-    {% block content %}
-
-    {%endblock%} 
+    <nav class="E-Navegation">
+        <img src="/src/images/templogo.jpeg" alt="logo-do-site" id="logo-ajust">
+        <ul class="E-Links">
+            <li class="L-Single"><a href="/">Home</a></li>
+            <li class="L-Single"><a href="/singup">Cadastro</a></li>
+            <li class="L-Single"><a href="/listing">Listagem</a></li>
+        </ul>
+        <a href="/account">Sua conta</a>
+    </nav>
+    <main class="E-CONTENT">
+        {% block content %}
+        {%endblock%}
+    </main>
 </body>
 </html>

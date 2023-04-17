@@ -1,22 +1,21 @@
-const express = require('express');
-const nunjucks = require('nunjucks');
+const express = require("express");
+const nunjucks = require("nunjucks");
 const server = express();
-const data = require('./data');
+const routes = require("./routes");
+const data = require("./data");
 const port = 3000;
 
-server.use(express.static('public'));
+server.use(express.static("public"));
+server.use(routes);
+
 server.set("view engine", "njk");
 
 nunjucks.configure("views", {
-    express: server,
-    autoescape: false,
-    noCache: true
+  express: server,
+  autoescape: false,
+  noCache: true,
 });
 
-server.get('/', function (req, res) {
-    return res.render("index", { items: data });
+server.listen(port, function () {
+  console.log("Server is running on port " + port);
 });
-
-server.listen(port, function (){
-    console.log('Server is running on port ' + port);
-})
