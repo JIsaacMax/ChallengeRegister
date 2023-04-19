@@ -6,6 +6,7 @@ const data = require("./data");
 const port = 3000;
 
 server.use(express.static("public"));
+server.use(express.urlencoded({ extended: true }));
 server.use(routes);
 
 server.set("view engine", "njk");

@@ -2,10 +2,13 @@
 
 :root{
     --fontMain: 'Poppins', sans-serif;
+
     --bg-color: #FDE2F3;
-    --text-color: #000;
+    --text-color: #ccf;
     --bg-nav-color: #2A2F4F;
     --color-accent: #917FB3;
+    --intence-color: #764EBF;
+    --neutral-color: #675B7F;
 }
 
 *{
@@ -36,7 +39,7 @@ body{
     flex-direction: row;
     padding: 8px 24px;
     row-gap: 16px;
-    background-color: var(--bg-nav-color);
+    background-color: var(--neutral-color);
 }
 
 .E-Links{

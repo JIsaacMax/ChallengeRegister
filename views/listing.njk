@@ -1,0 +1,41 @@
+{% extends "layout.njk" %}
+{%block head%}
+  <title>Home de verdade, achei algo</title>
+  <link rel="stylesheet" href="/styles/index.css">
+  <link rel="stylesheet" href="/styles/general.css">
+  <link rel="stylesheet" href="/styles/newBook.css">
+  {% endblock %}
+  {% block content %}
+    <div class="container">
+      <div class="focus"></div>
+      <div class="focus">
+        <form action="/listing " method="POST" class="new-book" id="new-book" type="submit">
+            <h1>Details</h1>
+
+            <label form="new-book" for="title">Titulo</label>
+            <input type="text" name="title" id="title" placeHolder="Titulo do Livro - Subtitulo">
+
+            <label form="new-book" for="autor">Autor</label>
+            <input type="text" name="autor" id="autor" placeHolder="Insira o nome do Autor">
+
+            <label form="new-book" for="synopsis">Sinopse</label>
+            <input type="text" name="synopsis" id="synopsis" placeHolder="Insira uma breve descrição do conteúdo do livro">
+
+            <label form="new-book" for="launch">Lançamento</label>
+            <input type="texy" name="launch" id="launch" placeholder="dd/mm/aaaa"
+        onfocus="(this.type='date')"
+        onblur="(this.type='text')">
+
+            <label form="new-book" for="pagesNum">Número de Páginas</label>
+            <input type="number" name="pagesNum" id="pagesNum" min=5 placeHolder="200">
+
+            <label form="new-book" for="classInd">Classificação Indicativa</label>
+            <select form="new-book" name="ClassInd" id="ClassInd">
+                <option value="default" default>Selecione a Classificação</option>
+                <option value="Livre">Livre</option>
+                <option value="+16">Maiores de 16 anos</option>
+                <option value="+18">Maiores de 18 anos</option>
+            </select>
+            <button type="submit" form="new-book">CADASTRAR</button>
+        </form>
+    {% endblock %}
