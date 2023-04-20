@@ -7,9 +7,11 @@ routes.get("/", (req, res) => {
   return res.render("index", { items: data });
 });
 
-routes.get("/listing", (req, res) => {
-  return res.render("listing", { items: data });
+routes.get("/singup", (req, res) => {
+  return res.render("singup", { items: data });
 });
+
+routes.get("/listing/:id", validBook.show);
 
 routes.post("/listing", validBook.post);
 
